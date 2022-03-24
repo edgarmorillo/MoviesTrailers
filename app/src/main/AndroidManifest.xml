@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="app.edgar.pelis">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/TmdbAppTheme">
+        <activity android:name="app.edgar.pelis.ui.splash.SplashActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/TmdbSplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="app.edgar.pelis.ui.search.SearchActivity"
+                  android:screenOrientation="portrait"
+                android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                       android:resource="@xml/tmdb_searchable"/>
+        </activity>
+        <activity android:name="app.edgar.pelis.ui.home.MainActivity"
+                  android:screenOrientation="portrait">
+            <meta-data android:name="android.app.default_searchable"
+                       android:value=".ui.search.SearchActivity" />
+        </activity>
+        <activity android:name="app.edgar.pelis.ui.landing.MovieLandingActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name="app.edgar.pelis.ui.player.PlayerActivity"
+                  android:screenOrientation="sensorLandscape"
+                  android:configChanges="orientation|screenSize|layoutDirection"/>
+    </application>
+
+</manifest>

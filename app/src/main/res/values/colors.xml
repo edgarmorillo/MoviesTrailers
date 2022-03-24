@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tmdbColorPrimary">#062692</color> C6D2FA
+    <color name="tmdbColorPrimaryDark">#000000</color>
+    <color name="tmdbColorAccent">#C6D2FA</color>
+    <color name="tmdbColorAccent50">#8001d277</color>
+    <color name="tmdb_window_background">#ffffff</color>
+    <color name="tmdb_tabs_background">#0C2C38</color>
+    <color name="red">#D20D45</color>
+    <color name="yellow">#D9CC23</color>
+</resources>
